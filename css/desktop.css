@@ -1,0 +1,87 @@
+/* ==========================================================
+   Semsom — DESKTOP / TABLET layout (loaded from 768px up)
+   <link rel="stylesheet" href="css/desktop.css" media="(min-width: 768px)">
+   ========================================================== */
+
+.container { padding-inline: 24px; }
+
+/* Header */
+.logo img { height: 52px; }
+.nav-chips, .call-icon, .action-bar { display: none; }
+.nav-desktop { display: flex; align-items: center; gap: 24px; font-size: 15px; font-weight: 600; }
+.nav-desktop a { color: var(--ink); text-decoration: none; padding: 12px 0; }
+.nav-desktop a:hover { color: var(--green); }
+/* On desktop the number is shown as text, not a call button */
+.book-desktop { display: flex; align-items: center; gap: 8px; margin: 0; padding: 10px 18px; border-radius: var(--pill); background: var(--sand); font-size: 15px; font-weight: 600; color: var(--muted); }
+.book-desktop .icon { width: 18px; height: 18px; color: var(--green); }
+.book-desktop strong { color: var(--ink); }
+
+/* Hero */
+.hero { padding-block: 72px 64px; display: flex; gap: 48px; align-items: center; }
+.hero-text { flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; gap: 24px; }
+.hero h1 { font-size: clamp(44px, 5.4vw, 76px); line-height: 1.04; }
+.hero .lead { font-size: 19px; max-width: 34rem; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 8px; }
+.hero-actions .btn { padding-inline: 28px; min-height: 54px; }
+.hero-facts { display: flex; flex-wrap: wrap; gap: 8px 28px; margin-top: 8px; font-size: 15px; color: var(--muted); }
+.hero-facts span { display: flex; align-items: center; gap: 8px; }
+.hero-facts .icon { width: 18px; height: 18px; color: var(--terra); }
+.hero-media { flex: 1 1 0; min-width: 0; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 224px 224px; gap: 12px; }
+.hero-media .photo-main { grid-row: span 2; height: 100%; }
+.hero-media .photo-side { height: 100%; }
+
+/* Pillars */
+.pillars { padding-block: 48px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+.pillar { flex-direction: column; gap: 10px; }
+.pillar h2 { font-size: 24px; }
+.pillar p { font-size: 16px; }
+
+/* Menu */
+.menu-section { padding-block: 96px; display: flex; flex-direction: column; gap: 32px; }
+.menu-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 16px; }
+.menu-section .section-head h2 { font-size: clamp(36px, 4vw, 52px); }
+.menu-pdf-mobile { display: none; }
+.menu-pdf-desktop { font-weight: 700; padding: 12px 0; }
+.tabs { flex-wrap: wrap; }
+.no-js .tabs { display: none; }
+.panel { padding: 40px; display: flex; flex-direction: column; gap: 20px; }
+.items { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 48px; }
+.item { padding: 18px 0; }
+.item-name { font-size: 17px; }
+.item-price { font-size: 16px; }
+
+/* Ambiance */
+.ambiance { padding-block: 96px; display: grid; grid-template-columns: 1.15fr 1fr; gap: 48px; align-items: center; }
+.amb-media { grid-column: 1; grid-row: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.amb-media .wide { grid-column: span 2; height: 300px; }
+.amb-media .tall { height: 260px; }
+.amb-media img { border-radius: var(--radius); }
+.ambiance .section-head h2 { font-size: clamp(36px, 4vw, 52px); }
+.ambiance .lead { font-size: 18px; line-height: 1.65; }
+.ambiance-text { grid-column: 2; grid-row: 1; display: flex; flex-direction: column; gap: 20px; }
+
+/* Careers (desktop: poster + full job cards) */
+.careers { padding-top: 96px; }
+.careers-inner { display: grid; grid-template-columns: 320px 1fr; gap: 48px; align-items: start; border: 0; background: transparent; }
+.careers-top { display: contents; }
+.careers-top .poster-link { grid-column: 1; grid-row: 1 / span 4; }
+.careers-top .careers-title { grid-column: 2; }
+.careers h2 { font-size: clamp(36px, 4vw, 52px); }
+.careers .jobs-short { display: none; }
+.careers-intro, .jobs, .apply, .careers-actions { grid-column: 2; }
+.careers-intro { font-size: 18px; margin-top: -24px; }
+.jobs { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.jobs .card { padding: 28px; display: flex; flex-direction: column; gap: 10px; }
+.careers-actions { display: none; }
+.apply p { font-size: 17px; }
+
+/* Visit */
+.visit { padding-block: 96px; display: grid; grid-template-columns: 1fr 1.2fr; gap: 48px; }
+.visit .section-head { grid-column: 1; }
+.visit .section-head h2 { font-size: clamp(36px, 4vw, 52px); }
+.visit-card { display: contents; }
+.visit-info { grid-column: 1; display: flex; flex-direction: column; gap: 24px; }
+.map { grid-column: 2; grid-row: 1 / span 2; height: 100%; min-height: 440px; }
+.info-block p { font-size: 20px; }
+.info-block .small { font-size: 18px; }
+.visit-info .btn { align-self: flex-start; }

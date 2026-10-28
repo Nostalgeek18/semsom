@@ -86,30 +86,29 @@ body { padding-bottom: 84px; } /* room for the action bar */
 .ambiance .lead { font-size: 16px; }
 .chips li { font-size: 13px; padding: 7px 14px; }
 
-/* Visit (shown before careers on mobile) */
+/* Visit — title, then map, then the details */
 .visit { padding-block: 36px; display: flex; flex-direction: column; gap: 20px; }
+.visit-main { display: contents; }
+.visit .section-head { order: 1; }
 .visit .section-head h2 { font-size: 32px; }
-.visit-card { display: flex; flex-direction: column; overflow: hidden; }
-.map { height: 220px; border-radius: 0; }
-.visit-info { padding: 18px; display: flex; flex-direction: column; gap: 16px; }
+.map-wrap { order: 2; height: 240px; }
+.visit-info { order: 3; gap: 16px; }
 .info-block p { font-size: 17px; }
 .info-block .small { font-size: 15px; }
 .visit-info .btn { width: 100%; }
 
 /* Careers */
 .careers { padding-bottom: 36px; }
-.careers-inner { display: flex; flex-direction: column; gap: 14px; padding: 18px; }
-.careers-top { display: flex; gap: 14px; align-items: center; }
-.poster-link { flex: none; }
-.poster-link img { width: 96px; height: 120px; object-fit: cover; border-radius: 10px; }
-.poster-link span { display: none; }
-.careers h2 { font-size: 26px; }
-.careers .jobs-short { margin: 0; font-size: 14px; color: var(--body); }
-.jobs { display: none; }
-.apply { padding: 0; background: transparent; }
-.apply .label, .apply .phone-big { display: none; }
-.careers-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
-.careers-actions .btn { min-height: 46px; padding: 10px 8px; font-size: 14px; }
+.careers-inner { gap: 20px; border-top: 1px solid var(--line); padding-top: 32px; }
+.careers h2 { font-size: 30px; }
+.careers .lead { font-size: 16px; }
+.jobs { display: flex; flex-direction: column; gap: 10px; }
+.jobs .card { padding: 18px; }
+.jobs .card h3 { font-size: 20px; }
+.jobs .card p { font-size: 15px; }
+.apply { padding: 18px; }
+.apply p { font-size: 15px; }
+.phone-big { font-size: 26px; }
 
 /* Footer */
 .footer-copy { width: 100%; }

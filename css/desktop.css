@@ -60,28 +60,18 @@
 .ambiance .lead { font-size: 18px; line-height: 1.65; }
 .ambiance-text { grid-column: 2; grid-row: 1; display: flex; flex-direction: column; gap: 20px; }
 
-/* Careers (desktop: poster + full job cards) */
-.careers { padding-top: 96px; }
-.careers-inner { display: grid; grid-template-columns: 320px 1fr; gap: 48px; align-items: start; border: 0; background: transparent; }
-.careers-top { display: contents; }
-.careers-top .poster-link { grid-column: 1; grid-row: 1 / span 4; }
-.careers-top .careers-title { grid-column: 2; }
-.careers h2 { font-size: clamp(36px, 4vw, 52px); }
-.careers .jobs-short { display: none; }
-.careers-intro, .jobs, .apply, .careers-actions { grid-column: 2; }
-.careers-intro { font-size: 18px; margin-top: -24px; }
-.jobs { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-.jobs .card { padding: 28px; display: flex; flex-direction: column; gap: 10px; }
-.careers-actions { display: none; }
-.apply p { font-size: 17px; }
-
-/* Visit */
-.visit { padding-block: 96px; display: grid; grid-template-columns: 1fr 1.2fr; gap: 48px; }
-.visit .section-head { grid-column: 1; }
+/* Visit — info on the left, map stretched to the same height on the right */
+.visit { padding-block: 96px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr); gap: 56px; align-items: stretch; }
 .visit .section-head h2 { font-size: clamp(36px, 4vw, 52px); }
-.visit-card { display: contents; }
-.visit-info { grid-column: 1; display: flex; flex-direction: column; gap: 24px; }
-.map { grid-column: 2; grid-row: 1 / span 2; height: 100%; min-height: 440px; }
-.info-block p { font-size: 20px; }
-.info-block .small { font-size: 18px; }
+.map-wrap { min-height: 480px; }
+.info-block p { font-size: 19px; }
+.info-block .small { font-size: 17px; }
 .visit-info .btn { align-self: flex-start; }
+
+/* Careers — title + intro + poster link on the left, roles + how to apply on the right */
+.careers { padding-bottom: 96px; }
+.careers-inner { grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr); gap: 56px; align-items: start; border-top: 1px solid var(--line); padding-top: 72px; }
+.careers h2 { font-size: clamp(36px, 4vw, 52px); }
+.careers .lead { font-size: 18px; }
+.jobs { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.apply p { font-size: 17px; }
